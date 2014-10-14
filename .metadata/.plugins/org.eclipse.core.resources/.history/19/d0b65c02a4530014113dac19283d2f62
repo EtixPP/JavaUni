@@ -1,0 +1,30 @@
+package p2;
+
+import p1.EAM;
+@SuppressWarnings("unused")
+public class Bmi_Main 
+{
+
+	public static void main(String[] args)
+	{
+		System.out.println(6%3);
+	}
+	public static boolean IsPerfect(double p_Num)
+	{
+		int l_sum = 0;
+		double l_counter = p_Num-1;
+		while(l_counter > 0)
+		{			
+			if(p_Num % l_counter > 0)
+				l_sum += l_counter;
+			l_counter--;
+
+		}
+		if(l_sum == p_Num)
+			return true;
+		else 
+			return false;
+	}
+
+	
+}
