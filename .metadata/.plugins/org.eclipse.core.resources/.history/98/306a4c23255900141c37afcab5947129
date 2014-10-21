@@ -1,0 +1,13 @@
+package p3Testat;
+
+public class Wallis_Product {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

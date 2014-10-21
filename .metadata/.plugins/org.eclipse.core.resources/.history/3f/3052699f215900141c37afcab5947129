@@ -1,0 +1,13 @@
+package p3Testat;
+import p3Testat.EAM;
+public class Zinsen_Calc 
+{
+
+
+	public static void main(String[] args) 
+	{
+		
+
+	}
+
+}

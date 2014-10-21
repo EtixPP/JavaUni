@@ -1,0 +1,23 @@
+package p3Testat;
+import p3Testat.EAM;
+public class Zinsen_Calc 
+{
+
+
+	public static void main(String[] args) 
+	{
+		System.out.println("Darlehenssumme in Euro:");
+		double l_loan = EAM.rDouble();
+		System.out.println("Zinssatz in Protzent:");
+		double l_InterestRate = EAM.rDouble();		
+		double l_LoanLeft = l_loan;
+		byte l_iterator = 1;
+		while(l_iterator < 9)
+		{
+			System.out.println(l_iterator +" - " + l_LoanLeft + " - " + (l_LoanLeft/100)*l_InterestRate);
+			l_LoanLeft = l_LoanLeft - (l_LoanLeft / 100 * 12.5);
+			l_iterator++;
+		}
+	}
+
+}

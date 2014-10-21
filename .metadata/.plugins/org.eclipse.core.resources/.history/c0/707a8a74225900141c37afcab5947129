@@ -1,0 +1,16 @@
+package p3Testat;
+import p3Testat.EAM;
+public class Zinsen_Calc 
+{
+
+
+	public static void main(String[] args) 
+	{
+		System.out.println("Darlehenssumme in Euro:");
+		long l_xInput = EAM.rLong();
+		System.out.println("Zinssatz in Protzent:");
+		long l_yInput = EAM.rLong();		
+
+	}
+
+}

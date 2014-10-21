@@ -7,14 +7,14 @@ public class Perfect_Number
 
 	public static void main(String[] args)
 	{
-		for ( int i = 0; i < 10000; i++)
+		for ( int i = 0; i < 100000; i++)
 			if(IsPerfect(i))
 				System.out.println(i);
 	}
 	public static boolean IsPerfect(int p_Num)
 	{
 		int l_sum = 0;
-		int l_counter = p_Num-1;
+		int l_counter = p_Num/2;
 		while(l_counter > 0)
 		{			
 			if(p_Num % l_counter == 0)
@@ -22,7 +22,7 @@ public class Perfect_Number
 			l_counter--;
 
 		}
-		if(l_sum == p_Num)
+		if(l_sum == p_Num && l_sum != 0)
 			return true;
 		else 
 			return false;

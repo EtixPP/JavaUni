@@ -1,0 +1,36 @@
+package p3Testat;
+import p3Testat.EAM;
+@SuppressWarnings("unused")
+public class KgV_Calc 
+{
+	
+
+	public static void main(String[] args) 
+	{
+		System.out.println("Geben sie x ein:");
+		long l_xInput = EAM.rLong();
+		System.out.println("Geben sie y ein:");
+		long l_yInput = EAM.rLong();
+		short l_iteratorX = 2;
+		short l_iteratorY = 2;
+		long l_x = l_xInput;
+		long l_y = l_yInput;
+		
+		while ( l_x != l_y )
+		{
+			if ( (l_xInput * l_iteratorX) > (l_yInput * l_iteratorY))
+			{
+				l_iteratorY++;
+				l_y = l_yInput * l_iteratorY;
+			}
+			if ( (l_xInput * l_iteratorX) < (l_yInput * l_iteratorY))
+			{
+				l_iteratorX++;
+				l_x = l_xInput * l_iteratorX;				
+			}				
+		}
+		System.out.println("Das kleinste gemeinsame Vielfache ist: "+l_x);
+		
+	}
+
+}
