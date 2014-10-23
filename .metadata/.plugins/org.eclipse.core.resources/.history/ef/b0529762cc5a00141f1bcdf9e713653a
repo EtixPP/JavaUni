@@ -1,0 +1,37 @@
+package p3Testat;
+import p3Testat.EAM;
+
+
+
+public class Test_Calc 
+{
+	public static void main(String[] args) 
+	{
+		boolean stop = false;
+		while(!stop)
+		{
+			System.out.println("Geben sie die erreichten Punkte ein:");
+			double l_AchievedPoints = EAM.rDouble();
+			if( l_AchievedPoints >= 0 && l_AchievedPoints <= 120)
+			{
+				if(l_AchievedPoints < 60) 
+				{
+					System.out.println("Die erreichte Note ist: 5.0"); 
+					break;
+				}
+				double l_result = 3* (120-l_AchievedPoints)/(120-60) +1;
+				System.out.println("Die erreichte Note ist: " + round(l_result));
+				stop = true;
+			}
+		}
+
+
+		
+
+	}
+	public static Long round(double p_Num)
+	{
+		double l_result = p_Num + 0.5;
+		return (long)l_result;
+	}
+}
