@@ -19,7 +19,7 @@ public class Wallis_Product {
 		System.out.println("Näherungswert für Pi (iterativ berechnet) ist: "+ 2* l_result);
 		try
 		{
-			System.out.println("Näherungswert für Pi (rekursiv berechnet) ist: "+ 2* ValRec(l_n));
+			System.out.println("Näherungswert für Pi (rekursiv berechnet) ist: "+ 2* ValRec(l_n,false,2.0,1.0));
 		}
 		catch(StackOverflowError e)
 		{
@@ -29,15 +29,7 @@ public class Wallis_Product {
 		
 
 	}
-	
-	 // Wrapper für Default Parameter da Java so etwas nicht unterstützt (Da zeigt sich mal wieder das Java an allen Ecken schwächelt D: )
-	//Verhindert halt eine falsche Parameterübergabe, normalerweise müsste man die dicke Methode noch privatisieren um da wirklich einen Effekt zu erzielen aber das wäre jetzt auch overload
-	public static Double ValRec(double p_Num)
-	{
-		 return ValRec(p_Num,false,2.0,1.0);
-	}
-	 // Nur ein bisschen rumgespielt, höchstwahrscheinlich eher mäßig effektiv implementiert.
-	public static Double ValRec(double p_Num, boolean p_switch, double p_top, double p_bot)
+	public static Double ValRec(double p_Num, boolean p_switch, double p_top, double p_bot) // Nur ein bisschen rumgespielt, höchstwahrscheinlich eher mäßig effektiv implementiert.
 	{
 		if(p_Num > 0)
 		{

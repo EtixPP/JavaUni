@@ -36,8 +36,7 @@ public class Wallis_Product {
 	{
 		 return ValRec(p_Num,false,2.0,1.0);
 	}
-	 // Nur ein bisschen rumgespielt, höchstwahrscheinlich eher mäßig effektiv implementiert.
-	public static Double ValRec(double p_Num, boolean p_switch, double p_top, double p_bot)
+	public static Double ValRec(double p_Num, boolean p_switch, double p_top, double p_bot) // Nur ein bisschen rumgespielt, höchstwahrscheinlich eher mäßig effektiv implementiert.
 	{
 		if(p_Num > 0)
 		{
